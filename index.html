@@ -924,6 +924,24 @@
             border-color: var(--amber-color);
         }
         
+        /*imagen de contacto*/
+        .contact-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .contact-image:hover img {
+            transform: scale(1.05);
+        }
+
+        
         /* Footer */
         footer {
             background-color: white;
@@ -1559,6 +1577,7 @@
                     <div class="contact-form">
                         <form id="contactForm">
                             <div class="mb-3">
+                                <h2><i class="bi bi-code-slash"></i><p>NextCode</p></h2>
                                 <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
                             </div>
                             <div class="mb-3">
@@ -1695,6 +1714,7 @@
 </body>
 
 </html>
+
 
 
 
