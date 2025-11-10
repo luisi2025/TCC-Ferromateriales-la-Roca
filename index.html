@@ -1042,6 +1042,95 @@
         .float-animation {
             animation: float 3s ease-in-out infinite;
         }
+
+        /* 📩 Sección de contacto con imagen y formulario */
+.contacto-container {
+    display: flex;
+    align-items: stretch; /* Ambos tendrán la misma altura */
+    justify-content: center;
+    gap: 2rem;
+    padding: 60px 0;
+}
+
+.formulario {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario h2 {
+    color: var(--amber-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.formulario input,
+.formulario textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: var(--transition-fast);
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--amber-color);
+    box-shadow: 0 0 0 0.2rem rgba(251, 191, 36, 0.25);
+}
+
+.formulario button {
+    background-color: var(--amber-color);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.formulario button:hover {
+    background-color: var(--amber-dark);
+    transform: translateY(-3px);
+}
+
+/* 📸 Imagen a la misma altura que el formulario */
+.imagen {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;          /* Misma altura del formulario */
+    object-fit: cover;     /* Sin deformarse */
+    border-radius: 15px;
+}
+
+/* 📱 Responsive (formulario arriba, imagen abajo) */
+@media (max-width: 992px) {
+    .contacto-container {
+        flex-direction: column;
+    }
+
+    .imagen img {
+        height: 300px; /* Ajusta la altura cuando sea vertical */
+    }
+}
+
+
+
+        
     </style>
 </head>
 <body>
@@ -1695,5 +1784,6 @@
     </script>
 </body>
 </html>
+
 
 
